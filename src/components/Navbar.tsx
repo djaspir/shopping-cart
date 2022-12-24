@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Button from "./Button";
+import { FaShoppingCart } from "react-icons/fa";
 
 const NavbarWrapper = styled.nav`
   display: flex;
@@ -18,6 +20,7 @@ const Navbar = () => {
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/products">Products</StyledLink>
       <StyledLink to="/contact">Contact</StyledLink>
+      <Button content={<FaShoppingCart />} type={"button"} />
     </NavbarWrapper>
   );
 };
