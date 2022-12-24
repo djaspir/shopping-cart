@@ -19,6 +19,7 @@ const GlobalStyle = styled.createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
     background-color: #fff;
+    font-family: 'Roboto', sans-serif;  
     /* Footer support */
     margin-bottom: 5.2rem;
   }
