@@ -15,11 +15,10 @@ const ButtonWrapper = styled.button`
 
 interface Props {
   content: React.ReactNode;
-  type: "button" | "submit" | "reset";
 }
 
-const Button = ({ content, type }: Props) => {
-  return <ButtonWrapper type={type}>{content}</ButtonWrapper>;
+const Button = ({ content }: Props) => {
+  return <ButtonWrapper>{content}</ButtonWrapper>;
 };
 
 export default Button;
