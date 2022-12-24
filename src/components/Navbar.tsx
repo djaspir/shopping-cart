@@ -7,11 +7,21 @@ const NavbarWrapper = styled.nav`
   display: flex;
   align-items: center;
   gap: 12rem;
+  font-size: 2.15rem;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    gap: 5rem;
+  }
 `;
 
 const StyledLink = styled(Link)`
-  font-size: 2.15rem;
   color: #000;
+  transition: 0.2 ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const Navbar = () => {

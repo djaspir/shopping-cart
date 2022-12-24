@@ -7,11 +7,16 @@ const HeaderWrapper = styled.header`
   align-items: center;
   gap: 3rem;
   padding: 2.5rem;
-`
+
+  @media (max-width: 1630px) {
+    flex-direction: column;
+    gap: 5rem;
+  }
+`;
 
 const Logo = styled.h1`
   font-size: 4rem;
-`
+`;
 
 const Header = () => {
   return (
@@ -19,7 +24,7 @@ const Header = () => {
       <Logo>FakeCoffeeStore</Logo>
       <Navbar />
     </HeaderWrapper>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
