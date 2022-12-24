@@ -8,7 +8,7 @@ const NavbarWrapper = styled.nav`
 `;
 
 const StyledLink = styled(Link)`
-  font-size: 2rem;
+  font-size: 2.15rem;
   color: #000;
 `;
 
