@@ -3,12 +3,12 @@ import Navbar from "./Navbar";
 
 const HeaderWrapper = styled.header`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  gap: 3rem;
-  padding: 2.5rem;
+  gap: 30rem;
+  padding: 2.5rem 0;
 
-  @media (max-width: 1630px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     gap: 5rem;
   }

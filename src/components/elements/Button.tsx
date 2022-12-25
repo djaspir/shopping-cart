@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const ButtonWrapper = styled.button`
   display: flex;
@@ -11,14 +11,23 @@ const ButtonWrapper = styled.button`
   &: hover {
     transform: scale(1.1);
   }
+
+  ${(props) =>
+    props.name === "messageBtn" &&
+    css`
+      width: 40rem;
+      font-size: 4rem;
+      font-weight: bold;
+    `}
 `;
 
 interface Props {
   content: React.ReactNode;
+  name?: string;
 }
 
-const Button = ({ content }: Props) => {
-  return <ButtonWrapper>{content}</ButtonWrapper>;
+const Button = ({ content, name }: Props) => {
+  return <ButtonWrapper name={name}>{content}</ButtonWrapper>;
 };
 
 export default Button;

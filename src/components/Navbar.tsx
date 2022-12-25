@@ -6,8 +6,9 @@ import { FaShoppingCart } from "react-icons/fa";
 const NavbarWrapper = styled.nav`
   display: flex;
   align-items: center;
-  gap: 12rem;
+  justify-content: space-between;
   font-size: 2.15rem;
+  width: 80rem;
 
   @media (max-width: 700px) {
     flex-direction: column;
