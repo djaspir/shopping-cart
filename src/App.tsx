@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Cart from "./components/Cart";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         </Routes>
       </Router>
       <Footer />
+      <Cart />
     </div>
   );
 };

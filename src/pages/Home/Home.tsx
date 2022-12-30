@@ -57,7 +57,7 @@ const Home = () => {
       <Message>
         <BigMessage>Not your ordinary cup of coffee</BigMessage>
         <SmallMessage>The Best of the Best Coffee Store</SmallMessage>
-        <Button content="Shop Now" name="messageBtn" />
+        <Button content="Shop Now" name="big" />
       </Message>
       <Image src={homepageImg} alt="coffee in a cup" />
       <BackgroundWave />

@@ -13,7 +13,14 @@ const ButtonWrapper = styled.button`
   }
 
   ${(props) =>
-    props.name === "messageBtn" &&
+    props.name === "primary" &&
+    css`
+      width: 100%;
+      padding: 1rem;
+    `}
+
+  ${(props) =>
+    props.name === "big" &&
     css`
       width: 40rem;
       font-size: 4rem;
