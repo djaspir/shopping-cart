@@ -13,10 +13,71 @@ const ButtonWrapper = styled.button`
   }
 
   ${(props) =>
+    props.name === "close" &&
+    css`
+      position: absolute;
+      top: 5rem;
+      right: 3rem;
+      padding: 0;
+      color: red;
+      font-size: 6rem;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
+    `}
+
+  ${(props) =>
+    (props.name === "increment" || props.name === "decrement") &&
+    css`
+      padding: 1rem;
+      border-radius: 0;
+      transition: background-color 0.15s ease-in-out;
+    `}
+
+  ${(props) =>
+    props.name === "increment" &&
+    css`
+      :hover {
+        background-color: #198754;
+        color: #fff;
+        transform: scale(1.1);
+      }
+      :active {
+        background-color: #a4a4a4;
+      }
+    `} 
+
+  ${(props) =>
+    props.name === "decrement" &&
+    css`
+      :hover {
+        background-color: #dc3545;
+        color: #fff;
+        transform: scale(1.1);
+      }
+      :active {
+        background-color: #a4a4a4;
+      }
+    `}
+
+
+  ${(props) =>
     props.name === "primary" &&
     css`
-      width: 100%;
+      width: 80%;
       padding: 1rem;
+      transition: background-color 0.15s ease-in-out;
+
+      &:hover {
+        background-color: #6f42c1;
+        color: #fff;
+      }
+
+      &:active {
+        background-color: #a4a4a4;
+      }
     `}
 
   ${(props) =>
