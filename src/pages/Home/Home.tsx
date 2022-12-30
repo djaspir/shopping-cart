@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import BackgroundWave from "../../components/elements/BackgroundWave";
-import homepageImg from "../../assets/homepageImg.png";
+import homepageImg from "../../assets/img/homepageImg.png";
 import Button from "../../components/elements/Button";
 
 const HomeWrapper = styled.main`

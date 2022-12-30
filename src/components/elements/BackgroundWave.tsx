@@ -1,4 +1,4 @@
-import brownWave from "../../assets/brown-wave.png";
+import brownWave from "../../assets/img/brown-wave.png";
 import styled from "styled-components";
 
 const BackgroundWaveWrapper = styled.img`
