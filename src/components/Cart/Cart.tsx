@@ -27,6 +27,10 @@ const Title = styled.div`
 `;
 
 const Products = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  height: 45;
   width: 100%;
 `;
 
