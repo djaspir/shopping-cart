@@ -15,16 +15,17 @@ const ButtonWrapper = styled.button`
   ${(props) =>
     props.name === "close" &&
     css`
-      position: absolute;
-      top: 5rem;
-      right: 3rem;
-      padding: 0;
-      color: red;
-      font-size: 6rem;
-      transition: transform 0.2s ease-in-out;
+      width: 80%;
+      padding: 1rem;
+
+      transition: background-color 0.15s ease-in-out;
 
       &:hover {
-        transform: rotate(90deg);
+        background-color: #ee8888;
+      }
+
+      &: active {
+        background-color: #a4a4a4;
       }
     `}
 

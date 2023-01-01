@@ -2,7 +2,6 @@ import styled from "styled-components";
 import Button from "../elements/Button";
 import CartItem from "./CartItem";
 import exampleProduct from "../../assets/exampleProduct";
-import { FaTimesCircle } from "react-icons/fa";
 import { v4 as uuid4 } from "uuid";
 
 const CartWrapper = styled.div`
@@ -18,15 +17,17 @@ const CartWrapper = styled.div`
   align-items: center;
   gap: 6rem;
   font-size: 3rem;
+  font-weight: bold;
   background-color: #c4c4c4;
+`;
+
+const Title = styled.div`
+  font-size: 4rem;
+  margin-bottom: 2rem;
 `;
 
 const Products = styled.div`
   width: 100%;
-`;
-
-const TotalCost = styled.div`
-  font-weight: bold;
 `;
 
 const Overlay = styled.div`
@@ -41,16 +42,21 @@ const Overlay = styled.div`
 
 const Cart = () => {
   const products = exampleProduct.map((product) => (
-    <CartItem name={product.name} price={product.price} image={product.img} />
+    <CartItem
+      key={uuid4()}
+      name={product.name}
+      price={product.price}
+      image={product.img}
+    />
   ));
   return (
     <>
       <CartWrapper>
-        <Button content={<FaTimesCircle />} name="close" />
-        Your Shopping Cart
+        <Title>Your Shopping Cart</Title>
         <Products>{products}</Products>
-        <TotalCost>Total: $200.00</TotalCost>
+        <div>Total: $200.00</div>
         <Button content="Checkout" name="primary" />
+        <Button content="Close" name="close" />
       </CartWrapper>
       <Overlay />
     </>

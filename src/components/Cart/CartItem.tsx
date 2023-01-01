@@ -14,13 +14,13 @@ const Image = styled.img`
   width: 14rem;
 `;
 
-const Info = styled.div`
+const Details = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  justify-content: space-between;
   width: 100%;
+  font-size: 2rem;
 `;
 
 const AmountChanger = styled.div`
@@ -28,8 +28,6 @@ const AmountChanger = styled.div`
   align-items: center;
   gap: 3rem;
 `;
-
-const Amount = styled.div``;
 
 interface Props {
   name: string;
@@ -41,15 +39,15 @@ const CartItem = ({ name, price, image }: Props) => {
   return (
     <CartItemWrapper>
       <Image src={image} alt={name} />
-      <Info>
-        <p>{name}</p>
-        <p>{price}</p>
+      <Details>
+        <div>{name}</div>
+        <div>{price}</div>
         <AmountChanger>
           <Button content={<FaPlus />} name="increment" />
-          <Amount>1</Amount>
+          <div>1</div>
           <Button content={<FaMinus />} name="decrement" />
         </AmountChanger>
-      </Info>
+      </Details>
     </CartItemWrapper>
   );
 };
