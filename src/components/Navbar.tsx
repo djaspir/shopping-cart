@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "./elements/Button";
 import { FaShoppingCart } from "react-icons/fa";
+import { openCart } from "../state/actions";
+import { useDispatch } from "react-redux";
 
 const NavbarWrapper = styled.nav`
   display: flex;
@@ -26,12 +28,19 @@ const StyledLink = styled(Link)`
 `;
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+
   return (
     <NavbarWrapper>
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/products">Products</StyledLink>
       <StyledLink to="/contact">Contact</StyledLink>
-      <Button content={<FaShoppingCart />} animation="scale" shape="round" />
+      <Button
+        onClick={() => dispatch(openCart())}
+        content={<FaShoppingCart />}
+        animation="scale"
+        shape="round"
+      />
     </NavbarWrapper>
   );
 };

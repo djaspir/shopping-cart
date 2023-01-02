@@ -1,7 +1,7 @@
-import Product from "../../types/productType";
+import { ProductType } from "../../types";
 import exampleImg from "./exampleImg.jpg";
 
-let exampleProduct: Product[] = [
+let exampleProduct: ProductType[] = [
   { name: "White T-Shirt", price: "$19.99", img: exampleImg },
 ];
 

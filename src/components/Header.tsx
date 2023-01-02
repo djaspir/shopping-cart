@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Navbar from "./Navbar";
-import { darken } from "polished";
 
 const HeaderWrapper = styled.header`
   display: flex;
@@ -17,7 +16,6 @@ const HeaderWrapper = styled.header`
 `;
 
 const Logo = styled.h1`
-  color: ${({ theme }) => darken(0.4, theme.colors.secondary)};
   font-size: 4rem;
 `;
 

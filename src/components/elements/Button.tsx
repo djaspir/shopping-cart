@@ -125,11 +125,13 @@ interface Props {
   color?: string;
   animation?: string;
   shape?: string;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button = ({ content, size, shape, color, animation }: Props) => {
+const Button = ({ onClick, content, size, shape, color, animation }: Props) => {
   return (
     <ButtonWrapper
+      onClick={onClick}
       color={color}
       animation={animation}
       size={size}
