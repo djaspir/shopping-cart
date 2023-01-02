@@ -7,14 +7,12 @@ const HomeWrapper = styled.main`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6rem 0;
   gap: 10rem;
 `;
 
 const Message = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 1rem;
   width: 50rem;
   min-width: 50rem;
@@ -57,7 +55,13 @@ const Home = () => {
       <Message>
         <BigMessage>Not your ordinary cup of coffee</BigMessage>
         <SmallMessage>The Best of the Best Coffee Store</SmallMessage>
-        <Button content="Shop Now" name="big" />
+        <Button
+          content="Shop Now"
+          size="big"
+          color="primary"
+          hoverEffect="color"
+          round
+        />
       </Message>
       <Image src={homepageImg} alt="coffee in a cup" />
       <BackgroundWave />

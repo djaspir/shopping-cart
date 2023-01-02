@@ -1,102 +1,152 @@
 import styled, { css } from "styled-components";
+import { darken } from "polished";
 
-const ButtonWrapper = styled.button`
+const ButtonWrapper = styled.button<Props>`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  border-radius: 50px;
-  transition: transform 0.2 ease-in-out;
+  padding: 1rem;
+  font-weight: bold;
 
-  &: hover {
-    transform: scale(1.1);
-  }
-
-  ${(props) =>
-    props.name === "close" &&
+  ${({ round }) =>
+    round &&
     css`
-      width: 80%;
-      padding: 1rem;
-
-      transition: background-color 0.15s ease-in-out;
-
-      &:hover {
-        background-color: #ee8888;
-      }
-
-      &: active {
-        background-color: #a4a4a4;
-      }
+      padding: 2rem;
+      border-radius: 50px;
     `}
 
-  ${(props) =>
-    (props.name === "increment" || props.name === "decrement") &&
+  ${({ fullWidth }) =>
+    fullWidth &&
     css`
-      padding: 1rem;
-      border-radius: 0;
-      transition: background-color 0.15s ease-in-out;
+      width: 100%;
     `}
 
-  ${(props) =>
-    props.name === "increment" &&
-    css`
-      :hover {
-        background-color: #198754;
-        color: #fff;
-        transform: scale(1.1);
-      }
-      :active {
-        background-color: #a4a4a4;
-      }
-    `} 
-
-  ${(props) =>
-    props.name === "decrement" &&
-    css`
-      :hover {
-        background-color: #dc3545;
-        color: #fff;
-        transform: scale(1.1);
-      }
-      :active {
-        background-color: #a4a4a4;
-      }
-    `}
-
-
-  ${(props) =>
-    props.name === "primary" &&
-    css`
-      width: 80%;
-      padding: 1rem;
-      transition: background-color 0.15s ease-in-out;
-
-      &:hover {
-        background-color: #6f42c1;
-        color: #fff;
-      }
-
-      &:active {
-        background-color: #a4a4a4;
-      }
-    `}
-
-  ${(props) =>
-    props.name === "big" &&
+  ${({ size }) =>
+    size === "big" &&
     css`
       width: 40rem;
       font-size: 4rem;
-      font-weight: bold;
+    `}
+
+  /* Colors */
+
+  ${({ color }) =>
+    color === "primary" &&
+    css`
+      background-color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.dark};
+    `}
+  
+  ${({ color }) =>
+    color === "red" &&
+    css`
+      background-color: ${({ theme }) => theme.colors.red};
+      color: ${({ theme }) => theme.colors.dark};
+    `}
+
+  ${({ color }) =>
+    color === "grey" &&
+    css`
+      background-color: ${({ theme }) => theme.colors.grey.main};
+      color: ${({ theme }) => theme.colors.dark};
+    `}
+
+  ${({ color }) =>
+    color === "dark" &&
+    css`
+      background-color: ${({ theme }) => theme.colors.dark};
+      color: ${({ theme }) => theme.colors.light};
+    `} 
+
+  /* Hover Effects */
+  ${({ hoverEffect }) =>
+    hoverEffect === "scale" &&
+    css`
+      transition: transform 0.15s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(1.02);
+      }
+    `}
+
+  ${({ hoverEffect }) =>
+    hoverEffect === "color" &&
+    css`
+      transition: background-color 0.15s ease-in-out;
+      ${({ color }: Props) =>
+        color === "primary" &&
+        css`
+          &:hover {
+            background-color: ${({ theme }) =>
+              darken(0.2, theme.colors.primary)};
+          }
+          &:active {
+            background-color: ${({ theme }) =>
+              darken(0.3, theme.colors.primary)};
+            transition: background-color 0.05s ease-in-out;
+          }
+        `}
+
+      ${({ color }: Props) =>
+        color === "red" &&
+        css`
+          &:hover {
+            background-color: ${({ theme }) => darken(0.2, theme.colors.red)};
+          }
+          &:active {
+            background-color: ${({ theme }) => darken(0.3, theme.colors.red)};
+            transition: background-color 0.05s ease-in-out;
+          }
+        `}
+
+      ${({ color }: Props) =>
+        color === "grey" &&
+        css`
+          &:hover {
+            background-color: ${({ theme }) =>
+              darken(0.2, theme.colors.grey.main)};
+          }
+          &:active {
+            background-color: ${({ theme }) =>
+              darken(0.3, theme.colors.grey.main)};
+            transition: background-color 0.05s ease-in-out;
+          }
+        `}
     `}
 `;
 
 interface Props {
-  content: React.ReactNode;
-  name?: string;
+  content?: React.ReactNode | string;
+  size?: string;
+  color?: string;
+  hoverEffect?: string;
+  fullWidth?: true;
+  round?: true;
 }
 
-const Button = ({ content, name }: Props) => {
-  return <ButtonWrapper name={name}>{content}</ButtonWrapper>;
+const Button = ({
+  content,
+  size,
+  round,
+  fullWidth,
+  color,
+  hoverEffect,
+}: Props) => {
+  return (
+    <ButtonWrapper
+      fullWidth={fullWidth}
+      color={color}
+      hoverEffect={hoverEffect}
+      size={size}
+      round={round}
+    >
+      {content}
+    </ButtonWrapper>
+  );
 };
 
 export default Button;

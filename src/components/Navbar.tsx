@@ -17,7 +17,7 @@ const NavbarWrapper = styled.nav`
 `;
 
 const StyledLink = styled(Link)`
-  color: #000;
+  color: ${({ theme }) => theme.colors.dark};
   transition: 0.2 ease-in-out;
 
   &:hover {
@@ -31,7 +31,7 @@ const Navbar = () => {
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/products">Products</StyledLink>
       <StyledLink to="/contact">Contact</StyledLink>
-      <Button content={<FaShoppingCart />} />
+      <Button content={<FaShoppingCart />} hoverEffect="scale" round />
     </NavbarWrapper>
   );
 };

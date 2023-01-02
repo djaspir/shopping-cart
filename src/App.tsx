@@ -18,7 +18,7 @@ const App = () => {
         </Routes>
       </Router>
       <Footer />
-      <Cart />
+      {/* <Cart /> */}
     </div>
   );
 };

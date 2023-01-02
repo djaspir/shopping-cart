@@ -59,8 +59,13 @@ const Cart = () => {
         <Title>Your Shopping Cart</Title>
         <Products>{products}</Products>
         <div>Total: $200.00</div>
-        <Button content="Checkout" name="primary" />
-        <Button content="Close" name="close" />
+        <Button
+          content="Checkout"
+          color="primary"
+          hoverEffect="color"
+          fullWidth
+        />
+        <Button content="Close" color="red" hoverEffect="color" fullWidth />
       </CartWrapper>
       <Overlay />
     </>

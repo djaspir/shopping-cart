@@ -43,9 +43,9 @@ const CartItem = ({ name, price, image }: Props) => {
         <div>{name}</div>
         <div>{price}</div>
         <AmountChanger>
-          <Button content={<FaPlus />} name="increment" />
+          <Button content={<FaPlus />} color="grey" hoverEffect="color" />
           <div>1</div>
-          <Button content={<FaMinus />} name="decrement" />
+          <Button content={<FaMinus />} color="grey" hoverEffect="color" />
         </AmountChanger>
       </Details>
     </CartItemWrapper>
