@@ -31,7 +31,7 @@ const Navbar = () => {
       <StyledLink to="/">Home</StyledLink>
       <StyledLink to="/products">Products</StyledLink>
       <StyledLink to="/contact">Contact</StyledLink>
-      <Button content={<FaShoppingCart />} hoverEffect="scale" round />
+      <Button content={<FaShoppingCart />} animation="scale" shape="round" />
     </NavbarWrapper>
   );
 };

@@ -8,15 +8,15 @@ const ButtonWrapper = styled.button<Props>`
   padding: 1rem;
   font-weight: bold;
 
-  ${({ round }) =>
-    round &&
+  ${({ shape }) =>
+    shape === "round" &&
     css`
       padding: 2rem;
       border-radius: 50px;
     `}
 
-  ${({ fullWidth }) =>
-    fullWidth &&
+  ${({ size }) =>
+    size === "wide" &&
     css`
       width: 100%;
     `}
@@ -59,8 +59,8 @@ const ButtonWrapper = styled.button<Props>`
     `} 
 
   /* Hover Effects */
-  ${({ hoverEffect }) =>
-    hoverEffect === "scale" &&
+  ${({ animation }) =>
+    animation === "scale" &&
     css`
       transition: transform 0.15s ease-in-out;
 
@@ -73,8 +73,8 @@ const ButtonWrapper = styled.button<Props>`
       }
     `}
 
-  ${({ hoverEffect }) =>
-    hoverEffect === "color" &&
+  ${({ animation }) =>
+    animation === "color" &&
     css`
       transition: background-color 0.15s ease-in-out;
       ${({ color }: Props) =>
@@ -123,26 +123,17 @@ interface Props {
   content?: React.ReactNode | string;
   size?: string;
   color?: string;
-  hoverEffect?: string;
-  fullWidth?: true;
-  round?: true;
+  animation?: string;
+  shape?: string;
 }
 
-const Button = ({
-  content,
-  size,
-  round,
-  fullWidth,
-  color,
-  hoverEffect,
-}: Props) => {
+const Button = ({ content, size, shape, color, animation }: Props) => {
   return (
     <ButtonWrapper
-      fullWidth={fullWidth}
       color={color}
-      hoverEffect={hoverEffect}
+      animation={animation}
       size={size}
-      round={round}
+      shape={shape}
     >
       {content}
     </ButtonWrapper>

@@ -17,7 +17,7 @@ const HeaderWrapper = styled.header`
 `;
 
 const Logo = styled.h1`
-  color: ${({ theme }) => darken(0.3, theme.colors.secondary)};
+  color: ${({ theme }) => darken(0.4, theme.colors.secondary)};
   font-size: 4rem;
 `;
 

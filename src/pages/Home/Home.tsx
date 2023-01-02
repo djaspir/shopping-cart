@@ -59,8 +59,8 @@ const Home = () => {
           content="Shop Now"
           size="big"
           color="primary"
-          hoverEffect="color"
-          round
+          animation="color"
+          shape="round"
         />
       </Message>
       <Image src={homepageImg} alt="coffee in a cup" />

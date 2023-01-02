@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Button from "../elements/Button";
 import CartItem from "./CartItem";
-import exampleProduct from "../../assets/exampleProduct";
+import exampleProduct from "../../assets/examples/exampleProduct";
 import { v4 as uuid4 } from "uuid";
 
 const CartWrapper = styled.div`
@@ -62,10 +62,10 @@ const Cart = () => {
         <Button
           content="Checkout"
           color="primary"
-          hoverEffect="color"
-          fullWidth
+          size="wide"
+          animation="color"
         />
-        <Button content="Close" color="red" hoverEffect="color" fullWidth />
+        <Button content="Close" color="red" size="wide" animation="color" />
       </CartWrapper>
       <Overlay />
     </>
