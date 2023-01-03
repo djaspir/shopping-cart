@@ -1,5 +1,5 @@
-import Button from "../../components/elements/Button";
 import styled from "styled-components";
+import Button from "../../components/elements/Button";
 
 const ProductCardWrapper = styled.div`
   display: flex;

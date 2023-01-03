@@ -1,8 +1,8 @@
-import styled from "styled-components";
 import { FaGithub } from "react-icons/fa";
-import BackgroundWave from "./elements/BackgroundWave";
 import { useLocation } from "react-router-dom";
+import styled from "styled-components";
 import { routes } from "../constants/routes";
+import BackgroundWave from "./elements/BackgroundWave";
 
 const FooterWrapper = styled.footer`
   position: absolute;

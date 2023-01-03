@@ -1,6 +1,6 @@
+import { FaMinus, FaPlus } from "react-icons/fa";
 import styled from "styled-components";
 import Button from "../elements/Button";
-import { FaMinus, FaPlus } from "react-icons/fa";
 
 const CartItemWrapper = styled.div`
   display: flex;

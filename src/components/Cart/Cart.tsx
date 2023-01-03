@@ -1,11 +1,11 @@
+import { useDispatch, useSelector } from "react-redux";
 import styled, { css } from "styled-components";
+import { v4 as uuid4 } from "uuid";
+import exampleProduct from "../../assets/examples/exampleProduct";
+import { closeCart } from "../../state/actions";
+import { RootState } from "../../types";
 import Button from "../elements/Button";
 import CartItem from "./CartItem";
-import exampleProduct from "../../assets/examples/exampleProduct";
-import { v4 as uuid4 } from "uuid";
-import { closeCart } from "../../state/actions";
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../types";
 
 const CartWrapper = styled.div<Props>`
   position: fixed;

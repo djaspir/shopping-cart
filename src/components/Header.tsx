@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import { routes } from "../constants/routes";
+import Navbar from "./Navbar";
 
 const HeaderWrapper = styled.header`
   display: flex;

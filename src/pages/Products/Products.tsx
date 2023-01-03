@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import ProductCard from "./ProductCard";
-import exampleProduct from "../../assets/examples/exampleProduct";
 import { v4 as uuid4 } from "uuid";
+import exampleProduct from "../../assets/examples/exampleProduct";
+import ProductCard from "./ProductCard";
 
 const ProductWrapper = styled.div`
   display: grid;
