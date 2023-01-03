@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import BackgroundWave from "../../components/elements/BackgroundWave";
 import homepageImg from "../../assets/img/homepageImg.png";
 import Button from "../../components/elements/Button";
 
@@ -8,6 +7,18 @@ const HomeWrapper = styled.main`
   justify-content: center;
   align-items: center;
   gap: 10rem;
+  margin-bottom: 7rem;
+
+  animation: fade-in ease 2s;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
 const Message = styled.div`
@@ -64,7 +75,6 @@ const Home = () => {
         />
       </Message>
       <Image src={homepageImg} alt="coffee in a cup" />
-      <BackgroundWave />
     </HomeWrapper>
   );
 };

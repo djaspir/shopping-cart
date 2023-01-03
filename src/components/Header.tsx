@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
+import { routes } from "../constants/routes";
 
 const HeaderWrapper = styled.header`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  max-width: ${({ theme }) => theme.widths.content}
   gap: 30rem;
-  padding: 2.5rem 0;
+  padding: 4rem 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
   @media (max-width: 1000px) {
@@ -17,12 +20,15 @@ const HeaderWrapper = styled.header`
 
 const Logo = styled.h1`
   font-size: 4rem;
+  color: ${({ theme }) => theme.colors.dark};
 `;
 
 const Header = () => {
   return (
     <HeaderWrapper>
-      <Logo>FakeCoffeeStore</Logo>
+      <Link to={routes.home}>
+        <Logo>FakeCoffeeStore</Logo>
+      </Link>
       <Navbar />
     </HeaderWrapper>
   );

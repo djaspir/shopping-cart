@@ -4,6 +4,7 @@ import Button from "./elements/Button";
 import { FaShoppingCart } from "react-icons/fa";
 import { openCart } from "../state/actions";
 import { useDispatch } from "react-redux";
+import { routes } from "../constants/routes";
 
 const NavbarWrapper = styled.nav`
   display: flex;
@@ -32,9 +33,9 @@ const Navbar = () => {
 
   return (
     <NavbarWrapper>
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/products">Products</StyledLink>
-      <StyledLink to="/contact">Contact</StyledLink>
+      <StyledLink to={routes.home}>Home</StyledLink>
+      <StyledLink to={routes.products}>Products</StyledLink>
+      <StyledLink to={routes.contact}>Contact</StyledLink>
       <Button
         onClick={() => dispatch(openCart())}
         content={<FaShoppingCart />}

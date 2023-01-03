@@ -95,10 +95,10 @@ const ButtonWrapper = styled.button<Props>`
         color === "red" &&
         css`
           &:hover {
-            background-color: ${({ theme }) => darken(0.2, theme.colors.red)};
+            background-color: ${({ theme }) => darken(0.1, theme.colors.red)};
           }
           &:active {
-            background-color: ${({ theme }) => darken(0.3, theme.colors.red)};
+            background-color: ${({ theme }) => darken(0.2, theme.colors.red)};
             transition: background-color 0.05s ease-in-out;
           }
         `}

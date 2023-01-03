@@ -1,5 +1,5 @@
-import BackgroundWave from "../../components/elements/BackgroundWave";
 import styled from "styled-components";
+
 import {
   FaGithub,
   FaFacebookMessenger,
@@ -12,7 +12,7 @@ const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10rem 0;
+  margin: 15rem 0;
 `;
 
 const SocialMedia = styled.div`
@@ -77,7 +77,6 @@ const Contact = () => {
           <p>16-14 Sakuragaokacho, Shibuya 150-0031 Tokyo Prefecture</p>
         </ContactInfo>
       </ContactWrapper>
-      <BackgroundWave />
     </div>
   );
 };

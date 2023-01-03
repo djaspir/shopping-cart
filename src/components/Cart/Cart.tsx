@@ -10,7 +10,7 @@ import { RootState } from "../../types";
 const CartWrapper = styled.div<Props>`
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -110%;
   height: 100%;
   width: 60rem;
   padding: 6rem;
@@ -22,6 +22,7 @@ const CartWrapper = styled.div<Props>`
   font-size: 3rem;
   font-weight: bold;
   background-color: #c4c4c4;
+  overflow: auto;
   transition: right 0.85s ease-in-out;
 
   ${({ isCartOpen }) =>
