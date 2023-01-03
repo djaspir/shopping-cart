@@ -13,15 +13,23 @@ const NavbarWrapper = styled.nav`
   font-size: 2.15rem;
   width: 80rem;
 
-  @media (max-width: 700px) {
-    flex-direction: column;
-    gap: 5rem;
+  @media (max-width: 1100px) {
+    gap: 4rem;
+  }
+
+  @media (max-width: 650px) {
+    width: 60rem;
+  }
+
+  @media (max-width: 450px) {
+    width: 50rem;
   }
 `;
 
 const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.dark};
-  transition: 0.2 ease-in-out;
+  transition: transform 0.15s ease-in-out;
+  padding: 1rem;
 
   &:hover {
     transform: scale(1.1);

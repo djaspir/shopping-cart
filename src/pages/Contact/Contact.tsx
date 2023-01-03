@@ -20,7 +20,7 @@ const SocialMedia = styled.div`
   gap: 10rem;
   font-size: 10rem;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 650px) {
     gap: 8rem;
     font-size: 8rem;
   }
@@ -46,7 +46,7 @@ const ContactInfo = styled.div`
   font-weight: bold;
   text-align: center;
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     font-size: 2.4rem;
   }
 `;

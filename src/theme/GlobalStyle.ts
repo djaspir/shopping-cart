@@ -1,4 +1,4 @@
-import * as styled from 'styled-components'
+import * as styled from "styled-components";
 
 const GlobalStyle = styled.createGlobalStyle`
   *,
@@ -16,10 +16,10 @@ const GlobalStyle = styled.createGlobalStyle`
     min-height: 100%;
   }
   body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
     background-color: #fff;
-    font-family: 'Roboto', sans-serif;  
+    font-family: "Roboto", sans-serif;
     /* Footer support */
     margin-bottom: 5.2rem;
   }
@@ -60,5 +60,10 @@ const GlobalStyle = styled.createGlobalStyle`
       font-size: 45%;
     }
   }
-`
-export default GlobalStyle
+  @media (max-width: 500px) {
+    html {
+      font-size: 40%;
+    }
+  }
+`;
+export default GlobalStyle;

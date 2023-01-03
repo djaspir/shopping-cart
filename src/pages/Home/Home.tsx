@@ -27,6 +27,10 @@ const Message = styled.div`
   gap: 1rem;
   width: 50rem;
   min-width: 50rem;
+
+  @media (max-width: 1100px) {
+    align-items: center;
+  }
 `;
 
 const SmallMessage = styled.div`
@@ -41,21 +45,22 @@ const BigMessage = styled.div`
   font-weight: bold;
   margin-bottom: 3rem;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     text-align: center;
+    margin-bottom: 3rem;
   }
 `;
 
 const Image = styled.img`
   max-width: 80rem;
-  z-index: 1;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     position: absolute;
+    z-index: -1;
     opacity: 0.3;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     max-width: 60rem;
   }
 `;

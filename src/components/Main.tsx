@@ -10,7 +10,7 @@ const MainWrapper = styled.main`
   margin: 0 auto;
   padding: 12rem;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 650px) {
     padding: 8rem 0;
   }
 `;
