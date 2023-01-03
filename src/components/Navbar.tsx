@@ -4,14 +4,14 @@ import Button from "./elements/Button";
 import { FaShoppingCart } from "react-icons/fa";
 import { openCart } from "../state/actions";
 import { useDispatch } from "react-redux";
-import { routes } from "../constants/routes";
+import { routes } from "../state/constants/routes";
 
 const NavbarWrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 2.15rem;
   width: 80rem;
+  font-size: 2.4rem;
 
   @media (max-width: 1100px) {
     gap: 4rem;
@@ -27,9 +27,9 @@ const NavbarWrapper = styled.nav`
 `;
 
 const StyledLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.dark};
-  transition: transform 0.15s ease-in-out;
   padding: 1rem;
+  color: ${({ theme }) => theme.colors.light};
+  transition: transform 0.15s ease-in-out;
 
   &:hover {
     transform: scale(1.1);

@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { routes } from "../constants/routes";
+import { routes } from "../state/constants/routes";
 import BackgroundWave from "./elements/BackgroundWave";
 
 const FooterWrapper = styled.footer`

@@ -12,7 +12,8 @@ const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15rem 0;
+  margin-top: 18rem;
+  margin-bottom: 32rem;
 `;
 
 const SocialMedia = styled.div`

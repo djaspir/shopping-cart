@@ -1,5 +1,5 @@
 import { Action } from "../../types";
-import { ActionTypes } from "../../constants/actionTypes";
+import { ActionTypes } from "../constants/actionTypes";
 import State from "../state";
 
 export const INIT_STATE: State = { isOpen: false };

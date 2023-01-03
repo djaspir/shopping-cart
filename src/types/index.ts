@@ -1,5 +1,5 @@
 import { RootState } from "../state/store";
-import { ActionTypes } from "../constants/actionTypes";
+import { ActionTypes } from "../state/constants/actionTypes";
 
 export type { RootState };
 
@@ -8,7 +8,8 @@ export type Action = {
 };
 
 export type ProductType = {
-  name: string;
+  id: string;
+  title: string;
   price: string;
-  img: string;
+  image: string;
 };

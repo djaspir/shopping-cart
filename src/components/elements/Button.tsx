@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { darken } from "polished";
+import { darken, lighten } from "polished";
 
 const ButtonWrapper = styled.button<Props>`
   display: flex;
@@ -113,6 +113,18 @@ const ButtonWrapper = styled.button<Props>`
           &:active {
             background-color: ${({ theme }) =>
               darken(0.3, theme.colors.grey.main)};
+            transition: background-color 0.05s ease-in-out;
+          }
+        `}
+      
+      ${({ color }: Props) =>
+        color === "dark" &&
+        css`
+          &:hover {
+            background-color: ${({ theme }) => lighten(0.1, theme.colors.dark)};
+          }
+          &:active {
+            background-color: ${({ theme }) => lighten(0.2, theme.colors.dark)};
             transition: background-color 0.05s ease-in-out;
           }
         `}

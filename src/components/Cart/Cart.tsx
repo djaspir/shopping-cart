@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import styled, { css } from "styled-components";
-import { v4 as uuid4 } from "uuid";
 import exampleProduct from "../../assets/examples/exampleProduct";
 import { closeCart } from "../../state/actions";
 import { RootState } from "../../types";
@@ -21,7 +20,7 @@ const CartWrapper = styled.div<Props>`
   gap: 6rem;
   font-size: 3rem;
   font-weight: bold;
-  background-color: #c4c4c4;
+  background-color: ${({ theme }) => theme.colors.light};
   overflow: auto;
   transition: right 0.85s ease-in-out;
 
@@ -37,8 +36,9 @@ const CartWrapper = styled.div<Props>`
 `;
 
 const Title = styled.div`
-  font-size: 4rem;
   margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: bold;
 `;
 
 const Products = styled.div`
@@ -79,10 +79,10 @@ const Cart = () => {
 
   const products = exampleProduct.map((product) => (
     <CartItem
-      key={uuid4()}
-      name={product.name}
+      key={product.id}
+      title={product.title}
       price={product.price}
-      image={product.img}
+      image={product.image}
     />
   ));
 

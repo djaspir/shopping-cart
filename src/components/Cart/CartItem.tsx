@@ -11,7 +11,14 @@ const CartItemWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  width: 14rem;
+  height: 100%;
+  width: auto;
+`;
+
+const ImageContainer = styled.div`
+  height: 13rem;
+  width: 20%;
+  margin: auto;
 `;
 
 const Details = styled.div`
@@ -29,18 +36,41 @@ const AmountChanger = styled.div`
   gap: 3rem;
 `;
 
+const Title = styled.div`
+  font-weight: bold;
+  height: 3rem;
+  overflow: hidden;
+`;
+
 interface Props {
-  name: string;
+  title: string;
   price: string;
   image: string;
 }
 
-const CartItem = ({ name, price, image }: Props) => {
+const CartItem = ({ title, price, image }: Props) => {
+  const formatTitle = (title: string) => {
+    const words = title.split(" ");
+    let result = "";
+    if (words.length < 3) {
+      return title;
+    }
+    for (let i = 0; i < 3; i++) {
+      result += words[i] + " ";
+    }
+    if (words.length > 3) {
+      result += "...";
+    }
+    return result;
+  };
+
   return (
     <CartItemWrapper>
-      <Image src={image} alt={name} />
+      <ImageContainer>
+        <Image src={image} alt={title} />
+      </ImageContainer>
       <Details>
-        <div>{name}</div>
+        <Title>{formatTitle(title)}</Title>
         <div>{price}</div>
         <AmountChanger>
           <Button content={<FaPlus />} color="grey" animation="color" />

@@ -4,10 +4,10 @@ import Button from "../../components/elements/Button";
 
 const HomeWrapper = styled.main`
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10rem;
-  margin-bottom: 7rem;
+  gap: 6rem;
+  margin-top: 6rem;
+  margin-bottom: 12rem;
 
   animation: fade-in ease 2s;
 
@@ -19,17 +19,20 @@ const HomeWrapper = styled.main`
       opacity: 1;
     }
   }
+
+  @media (max-width: 1100px) {
+    align-items: center
+    justify-content: center;
+  }
 `;
 
 const Message = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: 50rem;
-  min-width: 50rem;
 
   @media (max-width: 1100px) {
     align-items: center;
+    width: 50rem;
   }
 `;
 
@@ -74,7 +77,7 @@ const Home = () => {
         <Button
           content="Shop Now"
           size="big"
-          color="primary"
+          color="dark"
           animation="color"
           shape="round"
         />

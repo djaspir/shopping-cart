@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import { routes } from "../constants/routes";
+import { routes } from "../state/constants/routes";
 import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import Products from "../pages/Products";
@@ -8,7 +8,6 @@ import Products from "../pages/Products";
 const MainWrapper = styled.main`
   max-width: ${({ theme }) => theme.widths.content};
   margin: 0 auto;
-  padding: 12rem;
 
   @media (max-width: 650px) {
     padding: 8rem 0;
