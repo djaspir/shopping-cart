@@ -1,6 +1,8 @@
 import { FaMinus, FaPlus } from "react-icons/fa";
 import styled from "styled-components";
 import Button from "../elements/Button";
+import { addToCart, removeFromCart } from "../../state/actions";
+import { useDispatch } from "react-redux";
 
 const CartItemWrapper = styled.div`
   display: flex;
@@ -43,25 +45,19 @@ const Title = styled.div`
 `;
 
 interface Props {
+  id: string;
   title: string;
   price: string;
   image: string;
+  quantity: number;
 }
 
-const CartItem = ({ title, price, image }: Props) => {
+const CartItem = ({ id, title, price, image, quantity }: Props) => {
+  const cartItem = { id, title, price, image, quantity };
+  const dispatch = useDispatch();
+
   const formatTitle = (title: string) => {
-    const words = title.split(" ");
-    let result = "";
-    if (words.length < 3) {
-      return title;
-    }
-    for (let i = 0; i < 3; i++) {
-      result += words[i] + " ";
-    }
-    if (words.length > 3) {
-      result += "...";
-    }
-    return result;
+    return 14 <= title.length ? `${title.substring(0, 14)}...` : title;
   };
 
   return (
@@ -71,11 +67,21 @@ const CartItem = ({ title, price, image }: Props) => {
       </ImageContainer>
       <Details>
         <Title>{formatTitle(title)}</Title>
-        <div>{price}</div>
+        <div>${price}</div>
         <AmountChanger>
-          <Button content={<FaPlus />} color="grey" animation="color" />
-          <div>1</div>
-          <Button content={<FaMinus />} color="grey" animation="color" />
+          <Button
+            onClick={() => dispatch(addToCart(cartItem))}
+            content={<FaPlus />}
+            color="grey"
+            animation="color"
+          />
+          <div>{cartItem.quantity}</div>
+          <Button
+            onClick={() => dispatch(removeFromCart(cartItem))}
+            content={<FaMinus />}
+            color="grey"
+            animation="color"
+          />
         </AmountChanger>
       </Details>
     </CartItemWrapper>

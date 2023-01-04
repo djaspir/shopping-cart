@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import styled, { css } from "styled-components";
-import exampleProduct from "../../assets/examples/exampleProduct";
+import { v4 as uuidv4 } from "uuid";
 import { closeCart } from "../../state/actions";
-import { RootState } from "../../types";
+import { RootState } from "../../state/store";
 import Button from "../elements/Button";
 import CartItem from "./CartItem";
 
@@ -30,7 +30,7 @@ const CartWrapper = styled.div<Props>`
       right: 0;
     `}
 
-  @media (max-width: 500px) {
+  @media (max-width: 450px) {
     width: 100%;
   }
 `;
@@ -67,6 +67,10 @@ const Overlay = styled.div<Props>`
     `}
 `;
 
+const Total = styled.div`
+  font-weight: bold;
+`;
+
 interface Props {
   isCartOpen: {
     isOpen: boolean;
@@ -74,15 +78,28 @@ interface Props {
 }
 
 const Cart = () => {
+  const cart = useSelector((state: RootState) => state.cart);
   const isOpen = useSelector((state: RootState) => state.isCartOpen);
   const dispatch = useDispatch();
 
-  const products = exampleProduct.map((product) => (
+  const sumTotal = () => {
+    return cart
+      .reduce(
+        (total, cartItem) =>
+          total + parseInt(cartItem.price) * cartItem.quantity,
+        0
+      )
+      .toFixed(2);
+  };
+
+  const cartItems = cart.map((cartItem) => (
     <CartItem
-      key={product.id}
-      title={product.title}
-      price={product.price}
-      image={product.image}
+      key={uuidv4()}
+      id={cartItem.id}
+      title={cartItem.title}
+      price={cartItem.price}
+      image={cartItem.image}
+      quantity={cartItem.quantity}
     />
   ));
 
@@ -90,8 +107,8 @@ const Cart = () => {
     <>
       <CartWrapper isCartOpen={isOpen}>
         <Title>Your Shopping Cart</Title>
-        <Products>{products}</Products>
-        <div>Total: $200.00</div>
+        <Products>{cartItems}</Products>
+        <Total>Total: ${sumTotal()}</Total>
         <Button
           content="Checkout"
           color="primary"

@@ -1,5 +1,4 @@
-import { ActionTypes } from "../constants/actionTypes";
-import { Action } from "../../types";
+import { ActionTypes } from "../../types/actionTypes";
 
-export const openCart = (): Action => ({ type: ActionTypes.OPEN_CART });
-export const closeCart = (): Action => ({ type: ActionTypes.CLOSE_CART });
+export const openCart = () => ({ type: ActionTypes.OPEN_CART });
+export const closeCart = () => ({ type: ActionTypes.CLOSE_CART });

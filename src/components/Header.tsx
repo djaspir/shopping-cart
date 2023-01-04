@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { routes } from "../state/constants/routes";
 import Navbar from "./Navbar";
-import { darken } from "polished";
 
 const HeaderWrapper = styled.header`
   display: flex;

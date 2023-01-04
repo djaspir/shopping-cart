@@ -52,6 +52,10 @@ const BigMessage = styled.div`
     text-align: center;
     margin-bottom: 3rem;
   }
+
+  @media (max-width: 450px) {
+    font-size: 5rem;
+  }
 `;
 
 const Image = styled.img`

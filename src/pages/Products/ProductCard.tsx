@@ -1,5 +1,7 @@
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import Button from "../../components/elements/Button";
+import { addToCart } from "../../state/actions";
 
 const ProductCardWrapper = styled.div`
   display: flex;
@@ -44,12 +46,16 @@ const Title = styled.div`
 `;
 
 interface Props {
+  id: string;
   image: string;
   title: string;
   price: string;
 }
 
-const ProductCard = ({ image, title, price }: Props) => {
+const ProductCard = ({ id, title, price, image }: Props) => {
+  const product = { id, title, price, image, quantity: 0 };
+  const dispatch = useDispatch();
+
   return (
     <ProductCardWrapper>
       <ImageContainer>
@@ -58,10 +64,11 @@ const ProductCard = ({ image, title, price }: Props) => {
       <Details>
         <Info>
           <Title>{title}</Title>
-          <div>{price}</div>
+          <div>${price}</div>
         </Info>
       </Details>
       <Button
+        onClick={() => dispatch(addToCart(product))}
         content="Add to Cart"
         size="wide"
         color="dark"

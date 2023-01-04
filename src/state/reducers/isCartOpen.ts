@@ -1,10 +1,13 @@
-import { Action } from "../../types";
-import { ActionTypes } from "../constants/actionTypes";
-import State from "../state";
+import { Action } from "../../types/actionTypes";
+import { ActionTypes } from "../../types/actionTypes";
+import { CartStateStatus } from "../state";
 
-export const INIT_STATE: State = { isOpen: false };
+export const INIT_STATE: CartStateStatus = { isOpen: false };
 
-const isCartOpenReducer = (state: State = INIT_STATE, action: Action) => {
+const isCartOpenReducer = (
+  state: CartStateStatus = INIT_STATE,
+  action: Action
+) => {
   switch (action.type) {
     case ActionTypes.OPEN_CART:
       return { isOpen: true };
