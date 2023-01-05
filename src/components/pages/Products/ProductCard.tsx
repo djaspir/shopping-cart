@@ -13,8 +13,8 @@ const ProductCardWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  height: 100%;
   width: auto;
+  height: 100%;
 `;
 
 const ImageContainer = styled.div`

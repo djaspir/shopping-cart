@@ -9,28 +9,11 @@ import { v4 as uuidv4 } from "uuid";
 
 const ProductWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 4rem;
-  margin-top: 8rem;
-  margin-bottom: 12rem;
-
-  @media (max-width: 1100px) {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 110rem;
-    padding: 0 4rem;
-  }
-
-  @media (max-width: 700px) {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 80rem;
-  }
-
-  @media (max-width: 550px) {
-    grid-template-columns: repeat(1, 1fr);
-    max-width: 40rem;
-  }
-
+  margin-top: 4rem;
   animation: fade-in ease 2s;
+
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -38,6 +21,15 @@ const ProductWrapper = styled.div`
     100% {
       opacity: 1;
     }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, min-max(28rem, 36rem));
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(1, 36rem);
   }
 `;
 
