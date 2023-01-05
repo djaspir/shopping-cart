@@ -5,10 +5,11 @@ import Button from "../elements/Button";
 
 const HomeWrapper = styled.main`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 6rem;
   margin-top: 6rem;
-  margin-bottom: 12rem;
+  margin-bottom: 18rem;
 
   animation: fade-in ease 2s;
 
@@ -21,19 +22,22 @@ const HomeWrapper = styled.main`
     }
   }
 
-  @media (max-width: 1100px) {
-    align-items: center
+  @media (max-width: 1024px) {
     justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
   }
 `;
 
 const Message = styled.div`
   display: flex;
   flex-direction: column;
+  width: 50rem;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1024px) {
     align-items: center;
-    width: 50rem;
   }
 `;
 
@@ -42,6 +46,10 @@ const SmallMessage = styled.div`
   letter-spacing: 0.5rem;
   font-size: 3rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 450px) {
+    font-size: 1.4rem;
+  }
 `;
 
 const BigMessage = styled.div`
@@ -49,7 +57,7 @@ const BigMessage = styled.div`
   font-weight: bold;
   margin-bottom: 3rem;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1024px) {
     text-align: center;
     margin-bottom: 3rem;
   }
@@ -60,16 +68,17 @@ const BigMessage = styled.div`
 `;
 
 const Image = styled.img`
-  max-width: 80rem;
+  max-width: 75rem;
 
-  @media (max-width: 1100px) {
+  @media (max-width: 1024px) {
     position: absolute;
     z-index: -1;
+    width: 100%
     opacity: 0.3;
   }
 
-  @media (max-width: 650px) {
-    max-width: 60rem;
+  @media (max-width: 600px) {
+    top: 25rem;
   }
 `;
 
