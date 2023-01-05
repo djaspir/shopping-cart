@@ -1,5 +1,9 @@
 # Shopping Cart
 
+A simple fake store React App.
+
+[Live Demo](https://djaspir.github.io/shopping-cart/) :point_left:
+
 ## Getting Started
 
 ```
@@ -16,4 +20,5 @@ npm start
 - [React](https://reactjs.org/)
 - [styled-components](https://styled-components.com/)
 - [Redux](https://redux.js.org/)
-- [Figma](https://figma.com/)
+- [React Router](https://reactrouter.com/)
+- [react-icons](https://www.npmjs.com/package/react-icons)
