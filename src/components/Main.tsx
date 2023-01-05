@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Contact from "../components/pages/Contact";
 import Home from "../components/pages/Home";
 import Products from "../components/pages/Products";
-import { routes } from "./state/constants/routes";
 
 const MainWrapper = styled.main`
   max-width: ${({ theme }) => theme.widths.content};
@@ -18,9 +17,9 @@ const Main = () => {
   return (
     <MainWrapper>
       <Routes>
-        <Route path={routes.home} element={<Home />} />
-        <Route path={routes.products} element={<Products />} />
-        <Route path={routes.contact} element={<Contact />} />
+        <Route path="/shopping-cart" element={<Home />} />
+        <Route path="/shopping-cart/products" element={<Products />} />
+        <Route path="/shopping-cart/contact" element={<Contact />} />
       </Routes>
     </MainWrapper>
   );

@@ -11,6 +11,21 @@ const HomeWrapper = styled.main`
   margin-top: 6rem;
   margin-bottom: 22rem;
 
+  @media (max-width: 1024px) {
+    justify-content: center;
+    margin-top: 12rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 18rem;
+  }
+`;
+
+const Message = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+
   animation: fade-in ease 2s;
 
   @keyframes fade-in {
@@ -21,20 +36,6 @@ const HomeWrapper = styled.main`
       opacity: 1;
     }
   }
-
-  @media (max-width: 1024px) {
-    justify-content: center;
-  }
-
-  @media (max-width: 768px) {
-    margin-top: 1rem;
-  }
-`;
-
-const Message = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50rem;
 
   @media (max-width: 1024px) {
     align-items: center;
@@ -70,15 +71,22 @@ const BigMessage = styled.div`
 const Image = styled.img`
   max-width: 75rem;
 
+  animation: fade-in ease 2s;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 1024px) {
     position: absolute;
     z-index: -1;
-    width: 100%
-    opacity: 0.3;
-  }
-
-  @media (max-width: 600px) {
-    top: 25rem;
+    width: 100%;
+    opacity: 0.5;
   }
 `;
 

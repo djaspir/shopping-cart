@@ -4,7 +4,6 @@ import Button from "./elements/Button";
 import { FaShoppingCart } from "react-icons/fa";
 import { openCart } from "./state/actions";
 import { useDispatch } from "react-redux";
-import { routes } from "./state/constants/routes";
 import { useSelector } from "react-redux";
 import { RootState } from "./state/store";
 
@@ -70,9 +69,9 @@ const Navbar = () => {
 
   return (
     <NavbarWrapper>
-      <StyledLink to={routes.home}>Home</StyledLink>
-      <StyledLink to={routes.products}>Products</StyledLink>
-      <StyledLink to={routes.contact}>Contact</StyledLink>
+      <StyledLink to="/shopping-cart">Home</StyledLink>
+      <StyledLink to="/shopping-cart/products">Products</StyledLink>
+      <StyledLink to="/shopping-cart/contact">Contact</StyledLink>
       <ButtonContainer>
         <Button
           onClick={() => dispatch(openCart())}
