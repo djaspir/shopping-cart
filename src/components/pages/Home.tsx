@@ -96,7 +96,7 @@ const Home = () => {
       <Message>
         <BigMessage>Not your ordinary cup of coffee</BigMessage>
         <SmallMessage>The Best of the Best Coffee Store</SmallMessage>
-        <Link to="/products">
+        <Link to="/shopping-cart/products">
           <Button
             content="Shop Now"
             size="big"
