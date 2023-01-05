@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/shopping-cart/static/js/main.26e33f0d.js",
+    "static/media/homepageImg.png": "/shopping-cart/static/media/homepageImg.fae8b6fafe08205f9035.png",
+    "static/media/brownWave.png": "/shopping-cart/static/media/brownWave.f767209eb5fdef69a4b8.png",
+    "index.html": "/shopping-cart/index.html",
+    "main.26e33f0d.js.map": "/shopping-cart/static/js/main.26e33f0d.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.26e33f0d.js"
+  ]
+}
