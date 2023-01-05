@@ -7,7 +7,6 @@ A simple fake store React App.
 ## Getting Started
 
 ```
-
 git clone https://github.com/djaspir/shopping-cart.git
 cd shopping-cart
 npm install
@@ -21,4 +20,5 @@ npm start
 - [styled-components](https://styled-components.com/)
 - [Redux](https://redux.js.org/)
 - [React Router](https://reactrouter.com/)
-- [react-icons](https://www.npmjs.com/package/react-icons)
+- [Figma](https://figma.com/)
+- [Fake Store API](https://fakestoreapi.com/)
