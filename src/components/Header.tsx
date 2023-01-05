@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { routes } from "./state/constants/routes";
 import Navbar from "./Navbar";
 
 const HeaderWrapper = styled.header`
@@ -30,7 +29,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <Container>
-        <Link to={routes.home}>
+        <Link to="/shopping-cart">
           <Logo>FakeCoffeeStore</Logo>
         </Link>
         <Navbar />
