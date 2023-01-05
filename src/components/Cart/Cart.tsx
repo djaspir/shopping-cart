@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import Button from "../elements/Button";
 import { closeCart } from "../state/actions";
 import { RootState } from "../state/store";
-import CartItem from "./CartItem";
+import CartItemCard from "./CartItem";
 
 const CartWrapper = styled.div<Props>`
   position: fixed;
@@ -93,7 +93,7 @@ const Cart = () => {
   };
 
   const cartItems = cart.map((cartItem) => (
-    <CartItem
+    <CartItemCard
       key={uuidv4()}
       id={cartItem.id}
       title={cartItem.title}

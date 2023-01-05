@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Button from "../elements/Button";
 import { addToCart, removeFromCart } from "../state/actions";
 
-const CartItemWrapper = styled.div`
+const CartItemCardWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -52,8 +52,8 @@ interface Props {
   quantity: number;
 }
 
-const CartItem = ({ id, title, price, image, quantity }: Props) => {
-  const cartItem = { id, title, price, image, quantity };
+const CartItemCard = ({ id, title, price, image, quantity }: Props) => {
+  const product = { id, title, price, image, quantity };
   const dispatch = useDispatch();
 
   const formatTitle = (title: string) => {
@@ -61,7 +61,7 @@ const CartItem = ({ id, title, price, image, quantity }: Props) => {
   };
 
   return (
-    <CartItemWrapper>
+    <CartItemCardWrapper>
       <ImageContainer>
         <Image src={image} alt={title} />
       </ImageContainer>
@@ -70,22 +70,22 @@ const CartItem = ({ id, title, price, image, quantity }: Props) => {
         <div>${price}</div>
         <AmountChanger>
           <Button
-            onClick={() => dispatch(addToCart(cartItem))}
+            onClick={() => dispatch(addToCart(product))}
             content={<FaPlus />}
             color="grey"
             animation="color"
           />
-          <div>{cartItem.quantity}</div>
+          <div>{product.quantity}</div>
           <Button
-            onClick={() => dispatch(removeFromCart(cartItem))}
+            onClick={() => dispatch(removeFromCart(product))}
             content={<FaMinus />}
             color="grey"
             animation="color"
           />
         </AmountChanger>
       </Details>
-    </CartItemWrapper>
+    </CartItemCardWrapper>
   );
 };
 
-export default CartItem;
+export default CartItemCard;
