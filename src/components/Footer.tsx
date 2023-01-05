@@ -40,7 +40,11 @@ const Footer = () => {
   return (
     <FooterWrapper>
       Copyright © Jasper A. Sanchez 2022
-      <GithubLink>
+      <GithubLink
+        href="https://github.com/djaspir"
+        target="_blank"
+        rel="noopener"
+      >
         <FaGithub />
       </GithubLink>
       {location.pathname !== "/shopping-cart/products" && (

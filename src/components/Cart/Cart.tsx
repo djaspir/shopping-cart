@@ -1,19 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
 import styled, { css } from "styled-components";
 import { v4 as uuidv4 } from "uuid";
+import Button from "../elements/Button";
 import { closeCart } from "../state/actions";
 import { RootState } from "../state/store";
-import Button from "../elements/Button";
 import CartItem from "./CartItem";
 
 const CartWrapper = styled.div<Props>`
   position: fixed;
+  z-index: 3;
   top: 0;
   right: -110%;
-  height: 100%;
   width: 60rem;
+  height: 100%;
   padding: 6rem;
-  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,7 @@ const CartWrapper = styled.div<Props>`
       right: 0;
     `}
 
-  @media (max-width: 450px) {
+  @media (max-width: 480px) {
     width: 100%;
   }
 `;
@@ -45,8 +45,8 @@ const Products = styled.div`
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  height: 45;
   width: 100%;
+  overflow: auto;
 `;
 
 const Overlay = styled.div<Props>`

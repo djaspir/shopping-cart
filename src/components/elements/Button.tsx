@@ -138,18 +138,9 @@ interface Props {
   animation?: string;
   shape?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  attachment?: string;
 }
 
-const Button = ({
-  onClick,
-  content,
-  size,
-  shape,
-  color,
-  animation,
-  attachment,
-}: Props) => {
+const Button = ({ onClick, content, size, shape, color, animation }: Props) => {
   return (
     <ButtonWrapper
       onClick={onClick}
@@ -157,7 +148,6 @@ const Button = ({
       animation={animation}
       size={size}
       shape={shape}
-      attachment={attachment}
     >
       {content}
     </ButtonWrapper>

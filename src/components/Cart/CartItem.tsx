@@ -1,8 +1,8 @@
 import { FaMinus, FaPlus } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import Button from "../elements/Button";
 import { addToCart, removeFromCart } from "../state/actions";
-import { useDispatch } from "react-redux";
 
 const CartItemWrapper = styled.div`
   display: flex;
@@ -13,8 +13,8 @@ const CartItemWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  height: 100%;
   width: auto;
+  height: 100%;
 `;
 
 const ImageContainer = styled.div`
@@ -39,8 +39,8 @@ const AmountChanger = styled.div`
 `;
 
 const Title = styled.div`
-  font-weight: bold;
   height: 3rem;
+  font-weight: bold;
   overflow: hidden;
 `;
 
