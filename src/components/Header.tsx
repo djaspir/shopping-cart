@@ -1,19 +1,23 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { routes } from "../state/constants/routes";
+import { routes } from "./state/constants/routes";
 import Navbar from "./Navbar";
 
 const HeaderWrapper = styled.header`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 4rem 0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: ${({ theme }) => theme.colors.dark};
+`;
 
-  @media (max-width: 1100px) {
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: ${({ theme }) => theme.widths.content};
+  margin: 0 auto;
+  padding: 4rem;
+
+  @media (max-width: 768px) {
     flex-direction: column;
-    gap: 5rem;
+    gap: 4rem;
   }
 `;
 
@@ -25,10 +29,12 @@ const Logo = styled.h1`
 const Header = () => {
   return (
     <HeaderWrapper>
-      <Link to={routes.home}>
-        <Logo>FakeCoffeeStore</Logo>
-      </Link>
-      <Navbar />
+      <Container>
+        <Link to={routes.home}>
+          <Logo>FakeCoffeeStore</Logo>
+        </Link>
+        <Navbar />
+      </Container>
     </HeaderWrapper>
   );
 };

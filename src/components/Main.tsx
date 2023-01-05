@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
-import { routes } from "../state/constants/routes";
 import Contact from "../components/pages/Contact";
 import Home from "../components/pages/Home";
 import Products from "../components/pages/Products";
+import { routes } from "./state/constants/routes";
 
 const MainWrapper = styled.main`
   max-width: ${({ theme }) => theme.widths.content};

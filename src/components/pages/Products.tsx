@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
-import { setProducts } from "../../state/actions/product";
-import { RootState } from "../../state/store";
+import { setProducts } from "../state/actions";
+import { RootState } from "../state/store";
 import ProductCard from "./Products/ProductCard";
 import { v4 as uuidv4 } from "uuid";
 
@@ -13,19 +13,23 @@ const ProductWrapper = styled.div`
   gap: 4rem;
   margin-top: 8rem;
   margin-bottom: 12rem;
+
   @media (max-width: 1100px) {
     grid-template-columns: repeat(3, 1fr);
     max-width: 110rem;
     padding: 0 4rem;
   }
+
   @media (max-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
     max-width: 80rem;
   }
+
   @media (max-width: 550px) {
     grid-template-columns: repeat(1, 1fr);
     max-width: 40rem;
   }
+
   animation: fade-in ease 2s;
   @keyframes fade-in {
     0% {

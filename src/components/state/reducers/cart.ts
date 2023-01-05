@@ -1,5 +1,5 @@
 import { CartState } from "../state";
-import { CartActionTypes, ActionTypes } from "../../types/actionTypes";
+import { CartActionTypes, ActionTypes } from "../../../types/actionTypes";
 
 const initialState: CartState = [];
 

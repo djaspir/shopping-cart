@@ -1,10 +1,12 @@
-import { CartItems, ProductState } from "../state/state";
+import { CartItems, ProductState } from "../components/state/state";
 // Define the action  types as constants  with string values
 export enum ActionTypes {
   OPEN_CART = "OPEN_CART",
   CLOSE_CART = "CLOSE_CART",
+
   ADD_TO_CART = "ADD_TO_CART",
   REMOVE_FROM_CART = "REMOVE_FROM_CART",
+
   SET_PRODUCT = "SET_PRODUCT",
 }
 

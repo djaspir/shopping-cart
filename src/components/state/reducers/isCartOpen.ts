@@ -1,5 +1,5 @@
-import { Action } from "../../types/actionTypes";
-import { ActionTypes } from "../../types/actionTypes";
+import { Action } from "../../../types/actionTypes";
+import { ActionTypes } from "../../../types/actionTypes";
 import { CartStateStatus } from "../state";
 
 export const INIT_STATE: CartStateStatus = { isOpen: false };

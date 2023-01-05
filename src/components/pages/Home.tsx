@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import homepageImg from "../../assets/img/homepageImg.png";
 import Button from "../elements/Button";
@@ -78,13 +79,15 @@ const Home = () => {
       <Message>
         <BigMessage>Not your ordinary cup of coffee</BigMessage>
         <SmallMessage>The Best of the Best Coffee Store</SmallMessage>
-        <Button
-          content="Shop Now"
-          size="big"
-          color="dark"
-          animation="color"
-          shape="round"
-        />
+        <Link to="/products">
+          <Button
+            content="Shop Now"
+            size="big"
+            color="dark"
+            animation="scale"
+            shape="round"
+          />
+        </Link>
       </Message>
       <Image src={homepageImg} alt="coffee in a cup" />
     </HomeWrapper>

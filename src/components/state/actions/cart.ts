@@ -2,7 +2,7 @@ import {
   ActionTypes,
   AddToCartAction,
   RemoveFromCartAction,
-} from "../../types/actionTypes";
+} from "../../../types/actionTypes";
 import { CartItems } from "../state";
 
 export const addToCart = (products: CartItems): AddToCartAction => {

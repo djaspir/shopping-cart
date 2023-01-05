@@ -2,29 +2,22 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "./elements/Button";
 import { FaShoppingCart } from "react-icons/fa";
-import { openCart } from "../state/actions";
+import { openCart } from "./state/actions";
 import { useDispatch } from "react-redux";
-import { routes } from "../state/constants/routes";
+import { routes } from "./state/constants/routes";
 import { useSelector } from "react-redux";
-import { RootState } from "../state/store";
+import { RootState } from "./state/store";
 
 const NavbarWrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80rem;
+  gap: 7rem;
   font-size: 2.4rem;
 
-  @media (max-width: 1100px) {
-    gap: 4rem;
-  }
-
-  @media (max-width: 650px) {
-    width: 60rem;
-  }
-
-  @media (max-width: 450px) {
-    width: 50rem;
+  @media (max-width: 480px) {
+    gap: 0;
+    width: 100;
   }
 `;
 

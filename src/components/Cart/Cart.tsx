@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import styled, { css } from "styled-components";
 import { v4 as uuidv4 } from "uuid";
-import { closeCart } from "../../state/actions";
-import { RootState } from "../../state/store";
+import { closeCart } from "../state/actions";
+import { RootState } from "../state/store";
 import Button from "../elements/Button";
 import CartItem from "./CartItem";
 

@@ -1,5 +1,5 @@
 import { ProductState } from "../state";
-import { SetProductActionTypes, ActionTypes } from "../../types/actionTypes";
+import { SetProductActionTypes, ActionTypes } from "../../../types/actionTypes";
 
 const initialState: ProductState = [];
 

@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
 import App from "./App";
-import store from "./state/store";
+import store from "./components/state/store";
 import GlobalStyle from "./theme/GlobalStyle";
 import Theme from "./theme/Theme";
 

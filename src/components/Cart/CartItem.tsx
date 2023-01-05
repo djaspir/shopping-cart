@@ -1,7 +1,7 @@
 import { FaMinus, FaPlus } from "react-icons/fa";
 import styled from "styled-components";
 import Button from "../elements/Button";
-import { addToCart, removeFromCart } from "../../state/actions";
+import { addToCart, removeFromCart } from "../state/actions";
 import { useDispatch } from "react-redux";
 
 const CartItemWrapper = styled.div`
