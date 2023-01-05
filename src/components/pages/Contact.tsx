@@ -57,19 +57,39 @@ const Contact = () => {
     <div>
       <ContactWrapper>
         <SocialMedia>
-          <SocialLink href="https://github.com/djaspir" target="_blank">
+          <SocialLink
+            href="https://github.com/djaspir"
+            target="_blank"
+            rel="noopener"
+          >
             <FaGithub />
           </SocialLink>
-          <SocialLink href="https://github.com/djaspir" target="_blank">
+          <SocialLink
+            href="https://github.com/djaspir"
+            target="_blank"
+            rel="noopener"
+          >
             <FaFacebookMessenger />
           </SocialLink>
-          <SocialLink href="https://github.com/djaspir" target="_blank">
+          <SocialLink
+            href="https://github.com/djaspir"
+            target="_blank"
+            rel="noopener"
+          >
             <FaFacebookF />
           </SocialLink>
-          <SocialLink href="https://github.com/djaspir" target="_blank">
+          <SocialLink
+            href="https://github.com/djaspir"
+            target="_blank"
+            rel="noopener"
+          >
             <FaTwitter />
           </SocialLink>
-          <SocialLink href="https://github.com/djaspir" target="_blank">
+          <SocialLink
+            href="https://github.com/djaspir"
+            target="_blank"
+            rel="noopener"
+          >
             <FaInstagram />
           </SocialLink>
         </SocialMedia>

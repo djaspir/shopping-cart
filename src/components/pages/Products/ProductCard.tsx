@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import Button from "../../components/elements/Button";
-import { addToCart } from "../../state/actions";
+import Button from "../../elements/Button";
+import { addToCart } from "../../../state/actions";
 
 const ProductCardWrapper = styled.div`
   display: flex;

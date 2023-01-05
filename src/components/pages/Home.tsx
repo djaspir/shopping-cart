@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import homepageImg from "../../assets/img/homepageImg.png";
-import Button from "../../components/elements/Button";
+import Button from "../elements/Button";
 
 const HomeWrapper = styled.main`
   display: flex;

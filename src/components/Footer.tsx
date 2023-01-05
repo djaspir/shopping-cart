@@ -1,8 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { routes } from "../state/constants/routes";
-import BackgroundWave from "./elements/BackgroundWave";
+import brownWave from "../assets/img/brownWave.png";
 
 const FooterWrapper = styled.footer`
   position: absolute;
@@ -21,10 +20,18 @@ const GithubLink = styled.a`
   display: flex;
   font-size: 2rem;
   transition: transform 0.2 ease-in-out;
+  color: #000;
 
   &:hover {
     transform: scale(1.3);
   }
+`;
+
+const BackgroundWave = styled.img`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
 `;
 
 const Footer = () => {
@@ -36,7 +43,9 @@ const Footer = () => {
       <GithubLink>
         <FaGithub />
       </GithubLink>
-      {location.pathname !== routes.products && <BackgroundWave />}
+      {location.pathname !== "/shopping-cart/products" && (
+        <BackgroundWave src={brownWave} alt="Background Image" />
+      )}
     </FooterWrapper>
   );
 };
