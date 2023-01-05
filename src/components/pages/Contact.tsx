@@ -12,8 +12,13 @@ const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10rem;
   margin-top: 18rem;
-  margin-bottom: 32rem;
+  margin-bottom: 34rem;
+
+  @media (max-width: 480px) {
+    margin-top: 5rem;
+  }
 `;
 
 const SocialMedia = styled.div`
@@ -21,13 +26,12 @@ const SocialMedia = styled.div`
   gap: 10rem;
   font-size: 10rem;
 
-  @media (max-width: 650px) {
-    gap: 8rem;
+  @media (max-width: 768px) {
+    gap: 5rem;
     font-size: 8rem;
   }
 
-  @media (max-width: 600px) {
-    gap: 5rem;
+  @media (max-width: 480px) {
     font-size: 5rem;
   }
 `;
@@ -47,7 +51,7 @@ const ContactInfo = styled.div`
   font-weight: bold;
   text-align: center;
 
-  @media (max-width: 650px) {
+  @media (max-width: 768px) {
     font-size: 2.4rem;
   }
 `;

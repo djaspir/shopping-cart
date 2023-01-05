@@ -9,7 +9,7 @@ const HomeWrapper = styled.main`
   align-items: center;
   gap: 6rem;
   margin-top: 6rem;
-  margin-bottom: 18rem;
+  margin-bottom: 22rem;
 
   animation: fade-in ease 2s;
 
